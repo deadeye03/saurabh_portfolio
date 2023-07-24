@@ -1,0 +1,168 @@
+/* Existing styles from the previous code */
+
+/* Add new styles for contact page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body{
+    background: #082e74;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.header-right {
+    display: flex;
+    gap: 21px;
+    margin-left: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: lightblue;
+    font-size: 1.03rem;
+}
+
+.logo{
+    position: absolute;
+    left: 29px;
+}
+.logo img{
+ border-radius: 50%;
+   
+    height: 29px;
+    width: 35px;
+}
+/* Existing styles from the previous code */
+
+/* Add new styles for contact page */
+.contact {
+    padding: 20px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: slideFromTop 1s ease, changeBodyColor 1s ease;
+}
+
+.about-me, .contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #756161;
+    border-radius: 10px;
+}
+
+.about-me h3, .contact-form h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: purple;
+}
+
+.about-me p {
+    font-size: 16px;
+    color: #ebe5e5;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: aqua;
+}
+
+.contact-form label {
+    font-size: 16px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #ff7f50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ff6347;
+}
+footer{
+    display: flex;
+    height: 8vh;
+    background: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.copyright{
+    display: flex;
+}
+/* Add animation for sliding from top to bottom */
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation for changing body background color */
+@keyframes changeBodyColor {
+    0% {
+        background-color: #f7f7f7;
+    }
+    100% {
+        background-color: grey;
+    }
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-me, .contact-form {
+        flex: none;
+    }
+}

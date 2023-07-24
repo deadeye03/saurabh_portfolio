@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 14, 84);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.logo{
+    display: flex;
+    position: absolute;
+    left: 9px;
+    margin-right: 5px;
+}
+.logo img{
+ border-radius: 50%;
+ display: flex;
+    height: 29px;
+    width: 35px;
+}
+.header-left h1 {
+    display: flex;
+    margin: 0;
+  margin-left: 0px;
+font-size: 20px;
+/* margin-left: 19px; */
+font-family: 'Poppins', sans-serif;
+}
+
+.header-right {
+    display: flex;
+    gap: 21px;
+    margin-left: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: lightblue;
+    font-size: 1.03rem;
+}
+
+main {
+    padding: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    /* margin-left: 100px; */
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+.about-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-left h2 {
+    margin-top: 0;
+}
+
+.about-right img {
+    height: 480px;
+width: 579px;
+}
+.purple{
+    color: purple;
+}
+/* Add animation keyframes */
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to main content */
+main {
+    animation: slideFromTop 1s ease;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-right {
+        margin-top: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-left,
+    .about-right {
+        padding: 10px;
+        text-align: center;
+    }
+}

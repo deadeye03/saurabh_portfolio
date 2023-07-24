@@ -1,0 +1,120 @@
+/* Existing styles from the previous code */
+
+/* Add new styles for projects page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body{
+    background: #0c125c;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.header-right {
+    display: flex;
+    gap: 21px;
+    margin-left: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: lightblue;
+    font-size: 1.03rem;
+}
+
+.logo{
+    position: absolute;
+    left: 29px;
+}
+.logo img{
+ border-radius: 50%;
+   
+    height: 29px;
+    width: 35px;
+}
+
+.projects {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    animation: slideFromLeft 1s ease, changeColor 3s ease infinite;
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.project p {
+    margin: 0;
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Add animation for sliding from left to right */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Add animation for changing color */
+@keyframes changeColor {
+    0% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #ff7f50;
+    }
+    50% {
+        background-color: #62d1a5;
+    }
+    75% {
+        background-color: #c6a5c6;
+    }
+    100% {
+        background-color: #555;
+    }
+}

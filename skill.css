@@ -1,0 +1,116 @@
+/* Existing styles from the previous code */
+
+.logo{
+    position: absolute;
+    left: 29px;
+}
+.logo img{
+ border-radius: 50%;
+   
+    height: 29px;
+    width: 35px;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.header-right {
+    display: flex;
+    gap: 21px;
+    margin-left: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-right a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-right a:hover {
+    color: lightblue;
+    font-size: 1.03rem;
+}
+
+body{
+    background: #081d61;
+}
+
+main {
+    animation: slideFromTop 1s ease;
+}
+
+/* Add new styles for skills page */
+.skills {
+    padding: 20px;
+}
+
+.skills h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    animation: slideFromBottom 1s ease;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skill img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.skill p {
+    margin: 0;
+    font-size: 16px;
+}
+.purple{
+    color: rgb(12, 180, 231);
+    font-size: 25px;
+}
+.h2-flex{
+    display: flex;
+    justify-content: center;
+    background-color: #081d61;
+     color: aqua;
+}
+
+/* Add animation for sliding from bottom to top */
+@keyframes slideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    70% {
+        transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
